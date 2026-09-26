@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moyashi Motor Management System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="toast"></div>
+
+  <section id="loginView" class="login-shell">
+    <div class="login-bg"></div>
+    <div class="login-card">
+      <div class="brand-mark">MM</div>
+      <div class="eyebrow">WORKSHOP & SPARE PART MANAGEMENT</div>
+      <h1>MOYASHI MOTOR</h1>
+      <p class="muted">Moyashi Motor 1 & Moyashi Motor 2</p>
+
+      <form id="loginForm">
+        <label>Username
+          <input id="loginUsername" autocomplete="username" required placeholder="Masukkan username">
+        </label>
+        <label>Password
+          <input id="loginPassword" autocomplete="current-password" type="password" required placeholder="Masukkan password">
+        </label>
+        <button class="btn btn-primary btn-block" type="submit">Masuk Sistem</button>
+      </form>
+      <div class="login-note">Sistem operasional bengkel • Dashboard • POS • Stok • Pembelian</div>
+    </div>
+  </section>
+
+  <section id="appView" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-brand">
+        <div class="brand-mark small">MM</div>
+        <div>
+          <strong>MOYASHI MOTOR</strong>
+          <span>Management System</span>
+        </div>
+      </div>
+      <nav id="navMenu"></nav>
+      <div class="side-footer">
+        <button class="btn btn-outline btn-block" id="logoutBtn">Keluar</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" id="menuBtn">☰</button>
+        <div>
+          <div class="page-kicker" id="pageKicker">Moyashi Motor</div>
+          <h2 id="pageTitle">Dashboard</h2>
+        </div>
+        <div class="topbar-right">
+          <select id="branchPicker" class="compact"></select>
+          <div class="user-chip">
+            <span id="headerUserName"></span>
+            <small id="headerRole"></small>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section id="view-dashboard" class="page-view"></section>
+        <section id="view-sales" class="page-view hidden"></section>
+        <section id="view-purchase" class="page-view hidden"></section>
+        <section id="view-receiving" class="page-view hidden"></section>
+        <section id="view-history" class="page-view hidden"></section>
+        <section id="view-settings" class="page-view hidden"></section>
+      </div>
+    </main>
+  </section>
+
+  <script src="config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
