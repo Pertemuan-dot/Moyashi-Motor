@@ -6,5 +6,5 @@
  * };
  */
 window.APP_CONFIG = {
-  BRIDGE_URL: ""
+  BRIDGE_URL: "https://script.google.com/macros/s/AKfycbwaORBNwP6MpYnxpf87Ajr6d7FWkk3WeFLu_YQwYcAzGeyoBPF87hLmt7Htm0P8GJBqsQ/exec"
 };
