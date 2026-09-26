@@ -19,9 +19,9 @@ window.MMApi = (() => {
       setTimeout(() => {
         if (pending.has(id)) {
           pending.delete(id);
-          reject(new Error("Permintaan ke server timeout."));
+          reject(new Error("Backend tidak merespons. Pastikan URL Apps Script /exec benar dan deployment sudah diperbarui."));
         }
-      }, 30000);
+      }, 20000);
     });
   }
 
